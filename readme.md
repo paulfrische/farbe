@@ -15,6 +15,11 @@ Lazy:
 ```
 
 ## Supported Themes
-- Gruvbox
-- Dracula
-- Nord
+### Gruvbox
+![image](https://github.com/paulfrische/farbe/assets/61984114/1e465a9d-d100-4480-96e2-babd1be1d043)
+
+## Dracula
+![image](https://github.com/paulfrische/farbe/assets/61984114/81363b75-c5dc-4fb8-8479-3a7ec1f15ac8)
+
+## Nord
+![image](https://github.com/paulfrische/farbe/assets/61984114/67c576e8-434e-4fda-b715-cfc0a0431156)
