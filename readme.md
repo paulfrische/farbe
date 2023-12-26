@@ -17,3 +17,4 @@ Lazy:
 ## Supported Themes
 - Gruvbox
 - Dracula
+- Nord
