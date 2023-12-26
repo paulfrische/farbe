@@ -64,7 +64,7 @@ M.highlight = function(palette)
 
     MsgArea = { bg = palette.bg[1], fg = palette.cyan[1] },
     MsgSeparator = { bg = palette.bg[1], fg = palette.fg[1] },
-    MoreMsg = { bg = palette.bg[1], fg = palette.bg[2] },
+    MoreMsg = { bg = palette.bg[1], fg = palette.fg[2] },
 
     Title = { bg = palette.bg[2], fg = palette.fg[1] },
 
@@ -96,11 +96,14 @@ M.highlight = function(palette)
     String = { bg = palette.bg[2], fg = palette.green[1] },
     Character = { bg = palette.bg[2], fg = palette.green[1] },
     Number = { fg = palette.cyan[2] },
-    Boolean = { fg = palette.cyan[2] },
+    Boolean = { fg = palette.purple[2] },
     Float = { fg = palette.cyan[2] },
 
     Identifier = { fg = palette.cyan[2] },
     Function = { fg = palette.green[2] },
+    ['@property'] = { fg = palette.blue[2] },
+    ['@field'] = { link = '@property' },
+    ['@variable'] = { fg = palette.fg[1] },
 
     Statement = { fg = palette.red[2] },
     Conditional = { fg = palette.red[2] },
@@ -134,6 +137,45 @@ M.highlight = function(palette)
     Error = { fg = palette.red[1], undercurl = true },
 
     Todo = { fg = palette.purple[1], bold = true },
+
+    -- lsp semantic tokens
+    ['@lsp.type.boolean'] = { link = '@boolean' },
+    ['@lsp.type.builtinType'] = { link = '@type.builtin' },
+    ['@lsp.type.comment'] = { link = '@comment' },
+    ['@lsp.type.decorator'] = { link = '@attribute' },
+    ['@lsp.type.deriveHelper'] = { link = '@attribute' },
+    ['@lsp.type.enum'] = { link = '@type' },
+    ['@lsp.type.enumMember'] = { link = '@constant' },
+    ['@lsp.type.escapeSequence'] = { link = '@string.escape' },
+    ['@lsp.type.formatSpecifier'] = { link = '@punctuation.special' },
+    ['@lsp.type.generic'] = { link = '@variable' },
+    ['@lsp.type.keyword'] = { link = '@keyword' },
+    ['@lsp.type.lifetime'] = { link = '@storageclass' },
+    ['@lsp.type.namespace'] = { link = '@namespace' },
+    ['@lsp.type.number'] = { link = '@number' },
+    ['@lsp.type.operator'] = { link = '@operator' },
+    ['@lsp.type.parameter'] = { link = '@parameter' },
+    ['@lsp.type.property'] = { link = '@property' },
+    ['@lsp.type.selfKeyword'] = { link = '@variable.builtin' },
+    ['@lsp.type.selfTypeKeyword'] = { link = '@variable.builtin' },
+    ['@lsp.type.string'] = { link = '@string' },
+    ['@lsp.type.typeAlias'] = { link = '@type.definition' },
+    ['@lsp.type.variable'] = {}, -- use treesitter styles for regular variables
+    ['@lsp.typemod.class.defaultLibrary'] = { link = '@type.builtin' },
+    ['@lsp.typemod.enum.defaultLibrary'] = { link = '@type.builtin' },
+    ['@lsp.typemod.enumMember.defaultLibrary'] = { link = '@constant.builtin' },
+    ['@lsp.typemod.function.defaultLibrary'] = { link = '@function.builtin' },
+    ['@lsp.typemod.keyword.async'] = { link = '@keyword.coroutine' },
+    ['@lsp.typemod.keyword.injected'] = { link = '@keyword' },
+    ['@lsp.typemod.macro.defaultLibrary'] = { link = '@function.builtin' },
+    ['@lsp.typemod.method.defaultLibrary'] = { link = '@function.builtin' },
+    ['@lsp.typemod.operator.injected'] = { link = '@operator' },
+    ['@lsp.typemod.string.injected'] = { link = '@string' },
+    ['@lsp.typemod.struct.defaultLibrary'] = { link = '@type.builtin' },
+    ['@lsp.typemod.variable.callable'] = { link = '@function' },
+    ['@lsp.typemod.variable.defaultLibrary'] = { link = '@variable.builtin' },
+    ['@lsp.typemod.variable.injected'] = { link = '@variable' },
+    ['@lsp.typemod.variable.static'] = { link = '@constant' },
   }
 
   for name, group in pairs(h) do
