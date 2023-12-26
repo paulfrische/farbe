@@ -8,6 +8,18 @@ M.highlight = function(palette)
     NormalNC = { bg = palette.bg[1], fg = palette.fg[1] },
     SignColumn = { bg = palette.bg[2], fg = palette.fg[1] },
 
+    -- Cursor
+    Cursor = { bg = palette.fg[2], fg = palette.fg[1] },
+    TermCursor = { bg = palette.fg[2], fg = palette.fg[1] },
+    TermCursorNC = { bg = palette.fg[2], fg = palette.fg[1] },
+    lCursor = { bg = palette.fg[2], fg = palette.fg[1] },
+    CursorIM = { bg = palette.fg[2], fg = palette.fg[1] },
+    CursorColumn = { bg = palette.bg[2], fg = palette.fg[1] },
+    CursorLine = { bg = palette.bg[2] },
+    CursorLineSign = { bg = palette.bg[2], fg = palette.fg[1] },
+    CursorLineFold = { bg = palette.bg[2], fg = palette.fg[1] },
+    CursorLineNr = { bg = palette.bg[2], fg = palette.fg[1] },
+
     ColorColumn = { bg = palette.bg[2], fg = palette.fg[2] },
     Conceal = { fg = palette.fg[2] },
 
@@ -88,7 +100,7 @@ M.highlight = function(palette)
     Float = { fg = palette.cyan[2] },
 
     Identifier = { fg = palette.cyan[2] },
-    Function = { fg = palette.fg[2] },
+    Function = { fg = palette.green[2] },
 
     Statement = { fg = palette.red[2] },
     Conditional = { fg = palette.red[2] },
@@ -122,17 +134,6 @@ M.highlight = function(palette)
     Error = { fg = palette.red[1], undercurl = true },
 
     Todo = { fg = palette.purple[1], bold = true },
-
-    Cursor = { bg = palette.fg[2], fg = palette.fg[1] },
-    TermCursor = { bg = palette.fg[2], fg = palette.fg[1] },
-    TermCursorNC = { bg = palette.fg[2], fg = palette.fg[1] },
-    lCursor = { bg = palette.fg[2], fg = palette.fg[1] },
-    CursorIM = { bg = palette.fg[2], fg = palette.fg[1] },
-    CursorColumn = { bg = palette.bg[2], fg = palette.fg[1] },
-    CursorLine = { bg = palette.bg[2] },
-    CursorLineSign = { bg = palette.bg[2], fg = palette.fg[1] },
-    CursorLineFold = { bg = palette.bg[2], fg = palette.fg[1] },
-    CursorLineNr = { bg = palette.bg[2], fg = palette.fg[1] },
   }
 
   for name, group in pairs(h) do
